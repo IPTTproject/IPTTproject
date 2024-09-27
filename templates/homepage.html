@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首頁</title>
+    <title>房屋資訊</title>
 </head>
 <body>
-    <h1>專案首頁</h1>
-    <h2>{{msg}}</h2>
+    <fieldset>
+        <div>
+            <form method="post">
+                <h1>專案首頁</h1>
+                <h2>{{msg}}</h2>
+                <lengend>房屋資訊查詢</lengend>
+                <input type="text" name="area" />
+                <input type="submit" value="查詢" class="btn btn-outline-secondary"/>
+            </form>
+        </div>
+    </fieldset>
+    
+    <!---查詢結果--->
+    
 </body>
 </html>
