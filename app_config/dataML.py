@@ -21,9 +21,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 y = df.房地總價
 X = df.drop("房地總價", axis = 1)
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 42)
 model = RandomForestRegressor(n_estimators = 100, random_state = 42)
-model.fit(x_train, y_train)
-y_pred = model.predict(x_test)
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
 score = r2_score(y_test, y_pred)
 print("準確度為：", score, sep = "")
