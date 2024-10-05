@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import OneHotEncoder as OHE
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, accuracy_score
+from sklearn.metrics import mean_squared_error
 df = pd.read_csv("data.csv")
 #將交易日期的值改成年份
 df["交易日期"] = df["交易日期"]//10000
