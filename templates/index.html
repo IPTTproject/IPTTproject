@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄市房價預估網站</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <header>
+        <button class="menu">&#9776;</button>
+        <h1>高雄市房價預估網站</h1>
+        <nav>
+            <ul>
+                <li><a href="#">預估房價</a></li>
+                <li><a href="#">房貸計算</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    
+
+    <main>
+        <section>
+            <fieldset class="n1">
+                <div>
+                <legend class="houseprice">房價資訊查詢</legend>
+                    <form method="post">
+                        <label class="area1">區域</label>
+                        <input class="area2" type="text" name="area"/>
+                        <input class="area3" type="submit" value="查詢" />
+                    </form>
+                </div>
+            </fieldset>
+        </section>
+        
+        
+        <!--查詢結果-->
+        
+        <!--jinja2 expression-->
+   
+        <!--sever side jinja2 expression-->
+        
+
+        {% if result!=None %}
+        <section class="show1">
+            <fieldset id="app">
+                <legend>查詢結果</legend>
+                <h1>前端記錄數:[[counter]]</h1>
+                <div>
+                    <table class="table table-dark table-hover table-bordered">
+                        <thead class="text-primary">
+                            <tr>
+                                <th>交易日期</th>
+                                <th>行政區</th>
+                                <th>交易標的種類</th>
+                                <th>代表建號屋齡</th>
+                                <th>房地總價</th>
+                                <th>幾房</th>
+                                <th>幾廳</th>
+                                <th>幾衛</th>
+                                <th>車位數量</th>
+                                <th>代表建號層次</th>
+                                <th>土地移轉面積</th>
+                                <th>建物移轉面積</th>
+                                <th>車位總持分面積</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item,index) in result">
+                                <td><button v-bind:accessKey="index" class="btn btn-danger" @click="showDataHandler">詳細資料...</button></td>
+                                <td>[[item.area]]</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+
+
+        
+            <fieldset id="showDialog" v-show="isShow">
+                <div>
+                    <table class="table table-primary table-hover">
+                        <tr>
+                            <td>區域</td>
+                            <td>[[house.area]]</td>
+                        </tr>
+                        <tr>
+                            <td>地址</td>
+                            <td>[[house.address]]</td>
+                        </tr>
+                        <tr>>
+                            <td>類型</td>
+                            <td>[[house.type]]</td>
+                        </tr>
+                        <tr>>
+                            <td>建物完工日期</td>
+                            <td>[[house.findate]]</td>
+                        </tr>
+                        <tr>>
+                            <td>總坪數</td>
+                            <td>[[house.totalpin]]</td>
+                        </tr>
+                        <tr>>
+                            <td>總售價</td>
+                            <td style="color:red;">[[house.total]]</td>
+                        </tr>
+                        <tr>>
+                            <td>單坪價</td>
+                            <td>[[house.unitprice]]</td>
+                        </tr>
+                    </table>
+                </div>
+            
+            </fieldset>
+        {% endif %}
+        </section>
+
+
+
+        
+        
+        
+
+        
+    </main>
+
+
+
+
+    
+
+    <footer>
+        <p>Copyright © 2024 高雄市房價預估網站 All rights reserved.</p>
+    </footer>
+</body>
+</html>
