@@ -86,17 +86,6 @@ header li {
     border-radius: 10px;
 }
 
-
-footer{
-    background-color: #000000;
-    color: #b7b7b7;
-    height:60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-}
-
 .menu{
     display: none;
 }
