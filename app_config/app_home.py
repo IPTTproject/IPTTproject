@@ -2,6 +2,5 @@ from app_config import app
 from flask import render_template
 @app.route("/")
 def home():
-    content = "你好，這是我們專案的首頁。"
-    html = render_template("homepage.html", msg = content)
+    html = render_template("index.html")
     return(html)
