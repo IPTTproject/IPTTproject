@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>房產資訊輸入</title>
+    <title>房價預測</title>
 </head>
 <body>
-    <form id="propertyForm">
+    <form id="propertyForm" action = "/pred_house_price" method="post">
         <label for="age">屋齡:</label>
-        <input type="number" id="age" name="age" min="0" required>
+        <input type="number" id="age" name="age" min="0" required><br><br>
+
         <label for="rooms">房:</label>
-        <input type="number" id="rooms" name="rooms" min="0" required>
+        <input type="number" id="rooms" name="rooms" min="0" required><br><br>
+
         <label for="living_rooms">廳:</label>
-        <input type="number" id="living_rooms" name="living_rooms" min="0" required>
+        <input type="number" id="living_rooms" name="living_rooms" min="0" required><br><br>
+
         <label for="bath_rooms">衛:</label>
-        <input type="number" id="bath_rooms" name="bath_rooms" min="0" required>
+        <input type="number" id="bath_rooms" name="bath_rooms" min="0" required><br><br>
+
         <label for="parking_spots">車位數量:</label>
-        <input type="number" id="parking_spots" name="parking_spots" min="0" required>
-        <label for="land_area">土地面積:</label>
-        <input type="number" id="land_area" name="land_area" min="0" required>
-        <label for="building_area">建物面積:</label>
-        <input type="number" id="building_area" name="building_area" min="0" required>
+        <input type="number" id="parking_spots" name="parking_spots" min="0" required><br><br>
+
         <label for="parking_spots_area">車位總面積:</label>
-        <input type="number" id="parking_spots_area" name="parking_spots_area" min="0" required>
+        <input type="number" id="parking_spots_area" name="parking_spots_area" min="0" required><br><br>
+
+        <label for="land_area">土地面積:</label>
+        <input type="number" id="land_area" name="land_area" min="0" required><br><br>
+
+        <label for="building_area">建物面積:</label>
+        <input type="number" id="building_area" name="building_area" min="0" required><br><br>
+
         <label for="floor">樓層:</label>
         <select id="floor" name="floor">
-            <option value="high">高樓層</option>
-            <option value="medium">中樓層</option>
-            <option value="low">低樓層</option>
-        </select>
+            <option value="low">低樓層(1-5)</option>
+            <option value="medium">中樓層(6-10)</option>
+            <option value="high">高樓層(10+)</option>
+        </select><br><br>
 
         <label for="district">行政區:</label>
         <select id="district" name="district">
-            <option value = "0">三名區</option>
-<option value = "1">仁武區</option>
-<option value = "2">內門區</option>
-<option value = "3">六龜區</option>
-<option value = "4">前金區</option>
-<option value = "5">前鎮區</option>
-<option value = "6">大寮區</option>
-<option value = "7">大樹區</option>
-<option value = "8">大社區</option>
-<option value = "9">小港區</option>
-<option value = "10">岡山區</option>
-<option value = "11">左營區</option>
-<option value = "12">彌陀區</option>
-<option value = "13">新興區</option>
-<option value = "14">旗山區</option>
-<option value = "15">旗津區</option>
-<option value = "16">杉林區</option>
-<option value = "17">林園區</option>
-<option value = "18">桃源區</option>
-<option value = "19">梓官區</option>
-<option value = "20">楠梓區</option>
-<option value = "21">橋頭區</option>
-<option value = "22">永安區</option>
-<option value = "23">湖內區</option>
-<option value = "24">燕巢區</option>
-<option value = "25">田寮區</option>
-<option value = "26">甲仙區</option>
-<option value = "27">美濃區</option>
-<option value = "28">苓雅區</option>
-<option value = "29">茂林區</option>
-<option value = "30">茄萣區</option>
-<option value = "31">路竹區</option>
-<option value = "32">那瑪夏區</option>
-<option value = "33">阿蓮區</option>
-<option value = "34">鳥松區</option>
-<option value = "35">鳳山區</option>
-<option value = "36">鹽埕區</option>
-<option value = "37">鼓山區</option>
-            
+            <option value = "Sanmin">三名區</option>
+            <option value = "Renwu">仁武區</option>
+            <option value = "Neimen">內門區</option>
+            <option value = "Liugui">六龜區</option>
+            <option value = "Qianjin">前金區</option>
+            <option value = "Qianzhen">前鎮區</option>
+            <option value = "Daliao">大寮區</option>
+            <option value = "Dasu">大樹區</option>
+            <option value = "Dashe">大社區</option>
+            <option value = "Xiaogang">小港區</option>
+            <option value = "Gangshan">岡山區</option>
+            <option value = "Zuoying">左營區</option>
+            <option value = "Mitou">彌陀區</option>
+            <option value = "Xinxing">新興區</option>
+            <option value = "Qishan">旗山區</option>
+            <option value = "Qijin">旗津區</option>
+            <option value = "Sanlin">杉林區</option>
+            <option value = "Linyuan">林園區</option>
+            <option value = "Taoyuan">桃源區</option>
+            <option value = "Zihguan">梓官區</option>
+            <option value = "Nanzih">楠梓區</option>
+            <option value = "Qiaotou">橋頭區</option>
+            <option value = "Yongan">永安區</option>
+            <option value = "Hunei">湖內區</option>
+            <option value = "Yanshao">燕巢區</option>
+            <option value = "Tianliao">田寮區</option>
+            <option value = "Jiaxian">甲仙區</option>
+            <option value = "Meinong">美濃區</option>
+            <option value = "Lingya">苓雅區</option>
+            <option value = "Maolin">茂林區</option>
+            <option value = "Qieding">茄萣區</option>
+            <option value = "Luzhu">蘆竹區</option>
+            <option value = "Namaxia">那瑪夏區</option>
+            <option value = "Alian">阿蓮區</option>
+            <option value = "Niaosong">鳥松區</option>
+            <option value = "Fengshan">鳳山區</option>
+            <option value = "Yancheng">鹽埕區</option>
+            <option value = "Gushan">鼓山區</option>
             </select>
-
         <button type="submit">送出</button>
     </form>
 
     <script>
-        // 用 JavaScript 傳送資料
+
     </script>
 </body>
 </html>

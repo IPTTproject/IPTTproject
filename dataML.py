@@ -42,6 +42,4 @@ y = final_df["房地總價"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 model = RandomForestRegressor(n_estimators=100, random_state=42)
 model.fit(X_train.values, y_train)
-#with open("model/MLmodel.pkl", "wb") as f:
-#    pickle.dump(model, f)
 joblib.dump(model, "/MLmodel.joblib")
