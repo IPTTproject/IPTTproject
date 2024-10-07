@@ -1,7 +1,7 @@
 from app_config import app
 import numpy as np
 from joblib import load
-from flask import Flask, request
+from flask import request, render_template
 @app.route("/pred_house_price", methods = ["post"])
 def ML():
     age = int(request.form["age"])
@@ -50,7 +50,7 @@ def ML():
         input_array = np.append(input_array, 0)
     input_array = input_array.reshape(1, 49)
     model = load("MLmodel.joblib")
-    price_pred = int(model.predict(input_array)[0]//10000)
-    return f"<h1>我們的模型預測您的房價為{price_pred}萬元。</h1>"
+    pred_price = int(model.predict(input_array)[0]//10000)
+    return render_template("price.html", pred_price = pred_price)
 if __name__ == "__main__":
     app.run()
