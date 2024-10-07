@@ -13,8 +13,6 @@ def ML():
     building_area = int(request.form["building_area"])
     parking_spots_area = int(request.form["parking_spots_area"])
     ans_floor = request.form["floor"]
-    arr = np.zeros(38)
-    Qianjin, Xinxing, Yancheng, Zuoying, Nanzih, Gushan, Qijin, Lingya, Sanmin, Qianzhen, Xiaogang, Fengshan, Niaosong, Dashe, Renwu, Dasu, Gangshan, Yanshao, Zihguan, Yongan, Mitou, Qiaotou, Tianliao, Qieding, Alian, Luzhu, Hunei, Namaxia, Taoyuan, Maolin, Liugui, Meinong, Qishan, Jiaxian, Neimen, Sanlin, Linyuan, Daliao = arr
     match ans_floor:
         case "low":
             floor = 1
