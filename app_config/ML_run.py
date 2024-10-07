@@ -12,14 +12,8 @@ def ML():
     land_area = int(request.form["land_area"])
     building_area = int(request.form["building_area"])
     parking_spots_area = int(request.form["parking_spots_area"])
-    ans_floor = request.form["floor"]
-    match ans_floor:
-        case "low":
-            floor = 1
-        case "medium":
-            floor = 2
-        case "high":
-            floor = 3
+    floor = int(request.form["floor"])
+    
     if parking_spots == 0 and parking_spots_area > 0:
         return "<h1>輸入錯誤，請確認參數無誤。<h1>"
     elif parking_spots_area == 0 and parking_spots > 0:
