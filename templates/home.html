@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高雄市房價預估網站</title>
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 
 
 </head>
@@ -21,56 +21,56 @@
         <form id="propertyForm" action = "/pred_house_price" method="post">
             
             <div class="age">
-                <label for="age">屋齡:</label>
+                <label for="age">屋齡：</label>
                 <input type="number" id="age" name="age" min="0" required><br><br>
             </div>
 
             <div class="rooms">
-                <label for="rooms">房:</label>
+                <label for="rooms">房：</label>
                 <input type="number" id="rooms" name="rooms" min="0" required><br><br>
             </div>
             
             <div class="living_rooms">
-                <label for="living_rooms">廳:</label>
+                <label for="living_rooms">廳：</label>
                 <input type="number" id="living_rooms" name="living_rooms" min="0" required><br><br>
             </div>
 
             <div class="bath_rooms">
-                <label for="bath_rooms">衛:</label>
+                <label for="bath_rooms">衛：</label>
                 <input type="number" id="bath_rooms" name="bath_rooms" min="0" required><br><br>
             </div>
 
             <div class="parking_spots">
-                <label for="parking_spots">車位數量:</label>
+                <label for="parking_spots">車位數量：</label>
                 <input type="number" id="parking_spots" name="parking_spots" min="0" required><br><br>
             </div>
 
             <div class="parking_spots_area">
-                <label for="parking_spots_area">車位總面積:</label>
+                <label for="parking_spots_area">車位總面積：</label>
                 <input type="number" id="parking_spots_area" name="parking_spots_area" min="0" required><br><br>
             </div>
 
             <div class="land_area">
-                <label for="land_area">土地面積:</label>
+                <label for="land_area">土地面積：</label>
                 <input type="number" id="land_area" name="land_area" min="0" required><br><br>
             </div>
 
             <div class="building_area">
-                <label for="building_area">建物面積:</label>
+                <label for="building_area">建物面積：</label>
                 <input type="number" id="building_area" name="building_area" min="0" required><br><br>
             </div>
 
             <div class="floor">
-                <label for="floor">樓層:</label>
+                <label for="floor">樓層：</label>
                     <select id="floor" name="floor">
-                        <option value="low">低樓層(1-5)</option>
-                        <option value="medium">中樓層(6-10)</option>
-                        <option value="high">高樓層(10+)</option>
+                        <option value="1">低樓層(1-5)</option>
+                        <option value="2">中樓層(6-10)</option>
+                        <option value="3">高樓層(10+)</option>
                     </select><br><br>
             </div>
 
             <div class="district">
-                <label for="district">行政區:</label>
+                <label for="district">行政區：</label>
                     <select id="district" name="district">
                         <option value = "0">三民區</option>
                         <option value = "1">仁武區</option>
@@ -113,7 +113,7 @@
                     </select>
             </div>
 
-            <button class="button" type="submit">送出</button>
+            <center><button class="button" type="submit">送出</button></center>
 
         </form>
     </div>
