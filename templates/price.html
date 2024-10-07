@@ -1,1 +1,41 @@
-{{pred_price}}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄市房價預估網站</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+
+</head>
+<body>
+
+    <header>
+        <button class="menu">&#9776;</button>
+        <h1>高雄市房價預估網站</h1>
+    </header>
+
+    <div class="container">
+        <h1 class="form-title">房價預估</h1>
+        <form id="propertyForm" action = "/pred_house_price" method="post">
+            
+            <div class="price">
+                <h1>我們預測您的房價為{{pred_price}}萬元</h1>
+            </div>
+
+            
+            
+
+        </form>
+    </div>
+    
+
+    
+    <script>
+        
+    </script>
+</body>
+</html>
