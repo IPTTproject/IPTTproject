@@ -1,11 +1,8 @@
 import numpy as np
-import seaborn as sns
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import OneHotEncoder as OHE
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-import pickle
 import joblib
 df = pd.read_csv("data.csv")
 #將交易日期的值改成年份
