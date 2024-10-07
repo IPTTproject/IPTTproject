@@ -53,13 +53,64 @@ header li {
 
 .container{
     max-width: 650px;
-    background: rgb(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.272);
     padding: 28px;
     border-radius: 10px;
     width: 800px;
     margin: 0 auto;
     
 }
+
+input{
+    background-color: transparent;
+    border: 10px;
+    border-radius: 1rem;
+    outline: 2px ridge rgba(0, 0, 0, 0.338);
+    color: black;
+    padding: 4px;
+    font-size: 16px;
+}
+
+.age{
+    text-align: center;
+}
+
+.rooms{
+    text-align: center;
+}
+.living_rooms{
+    text-align: center;
+}
+.bath_rooms{
+    text-align: center;
+}
+.parking_spots{
+    text-align: center;
+}
+.parking_spots_area{
+    text-align: center;
+}
+.land_area{
+    text-align: center;
+}
+.building_area{
+    text-align: center;
+}
+.floor{
+    text-align: center;
+}
+.district{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -81,6 +132,9 @@ align-content: center;
 .menu{
     display: none;
 }
+
+
+
 
 
 
@@ -118,7 +172,7 @@ align-content: center;
         padding: 28px;
         margin: 0 28px;
         border-radius: 10px;
-    
+        
         
     }
 
